@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19DBDDEACEC62DB76D499AB0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BD37A1070185508B39F648 /* libPods.a */; };
 		B25C79B51CC3D89600112BD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B25C79B41CC3D89600112BD3 /* main.m */; };
 		B25C79B81CC3D89600112BD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B25C79B71CC3D89600112BD3 /* AppDelegate.m */; };
 		B25C79BB1CC3D89600112BD3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25C79BA1CC3D89600112BD3 /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		73BD37A1070185508B39F648 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		763AA268342C254DD047C4C6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B25C79B01CC3D89600112BD3 /* MeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B25C79B41CC3D89600112BD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B25C79B61CC3D89600112BD3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		B25C79D41CC3D89600112BD3 /* MeDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B25C79D81CC3D89600112BD3 /* MeDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeDemoUITests.m; sourceTree = "<group>"; };
 		B25C79DA1CC3D89600112BD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC845C3176D5A74FA48AD05B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19DBDDEACEC62DB76D499AB0 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14543AE12DA57735EE0F9E72 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC845C3176D5A74FA48AD05B /* Pods.debug.xcconfig */,
+				763AA268342C254DD047C4C6 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		800112A0C9DDF20C27CF7E75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73BD37A1070185508B39F648 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B25C79A71CC3D89600112BD3 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +107,8 @@
 				B25C79CC1CC3D89600112BD3 /* MeDemoTests */,
 				B25C79D71CC3D89600112BD3 /* MeDemoUITests */,
 				B25C79B11CC3D89600112BD3 /* Products */,
+				14543AE12DA57735EE0F9E72 /* Pods */,
+				800112A0C9DDF20C27CF7E75 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B25C79DD1CC3D89600112BD3 /* Build configuration list for PBXNativeTarget "MeDemo" */;
 			buildPhases = (
+				79C6BE3EAA9A6EBCB997007B /* Check Pods Manifest.lock */,
 				B25C79AC1CC3D89600112BD3 /* Sources */,
 				B25C79AD1CC3D89600112BD3 /* Frameworks */,
 				B25C79AE1CC3D89600112BD3 /* Resources */,
+				D2B7A111544A526B5765485B /* Embed Pods Frameworks */,
+				11BA176DF5ED9761EC94FC3C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,6 +291,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11BA176DF5ED9761EC94FC3C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79C6BE3EAA9A6EBCB997007B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D2B7A111544A526B5765485B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B25C79AC1CC3D89600112BD3 /* Sources */ = {
@@ -413,10 +488,26 @@
 		};
 		B25C79DE1CC3D89600112BD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC845C3176D5A74FA48AD05B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/**",
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI/",
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/Wechat/**",
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/AlipayShare/**",
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/SinaSSO/**",
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/Line/**",
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/Whatsapp/**",
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/Instagram/**",
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/Tumblr/**",
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/LaiWang/**",
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/Twitter/**",
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/Facebook/**",
+				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wsf.MeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -424,10 +515,26 @@
 		};
 		B25C79DF1CC3D89600112BD3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 763AA268342C254DD047C4C6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/**",
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI/",
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/Wechat/**",
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/AlipayShare/**",
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/SinaSSO/**",
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/Line/**",
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/Whatsapp/**",
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/Instagram/**",
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/Tumblr/**",
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/LaiWang/**",
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/Twitter/**",
+					"$(PODS_ROOT)/UmengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/Facebook/**",
+				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wsf.MeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -498,6 +605,7 @@
 				B25C79DF1CC3D89600112BD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B25C79E01CC3D89600112BD3 /* Build configuration list for PBXNativeTarget "MeDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +614,7 @@
 				B25C79E21CC3D89600112BD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B25C79E31CC3D89600112BD3 /* Build configuration list for PBXNativeTarget "MeDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +623,7 @@
 				B25C79E51CC3D89600112BD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
